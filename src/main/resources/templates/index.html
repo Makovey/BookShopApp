@@ -44,9 +44,9 @@ p.error-browser
     <div class="Header-rowMain">
         <div class="wrap">
             <div class="row">
-                <div class="row-block Header-logo"><a class="logo" href="/"><img class="logo-image"
-                                                                                 src="/assets/img/logo.png"
-                                                                                 alt="logo.png"/><span
+                <div class="row-block Header-logo"><a class="logo" th:href="@{/bookshop}"><img class="logo-image"
+                                                                                               src="/assets/img/logo.png"
+                                                                                               alt="logo.png"/><span
                         class="logo-text">BOOKSHOP</span></a>
                 </div>
                 <div class="Header-searchWrap row-block">
@@ -117,15 +117,15 @@ p.error-browser
         <div class="wrap">
             <nav class="menuModal" id="navigate">
                 <ul class="menu menu_main">
-                    <li class="menu-item menu-item_ACTIVE"><a class="menu-link" href="/index.html">Главная</a>
+                    <li class="menu-item menu-item_ACTIVE"><a class="menu-link" th:href="@{/bookshop}">Главная</a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="/genres/index.html">Жанры</a>
+                    <li class="menu-item"><a class="menu-link" th:href="@{/genres}">Жанры</a>
                     </li>
                     <li class="menu-item"><a class="menu-link" href="/books/recent.html">Новинки</a>
                     </li>
                     <li class="menu-item"><a class="menu-link" href="/books/popular.html">Популярное</a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="/authors/index.html">Авторы</a>
+                    <li class="menu-item"><a class="menu-link" th:href="@{/authors}">Авторы</a>
                     </li>
                 </ul>
             </nav>
@@ -137,8 +137,7 @@ p.error-browser
         <main class="Middle-main">
             <div class="Section">
                 <div class="Section-header">
-                    <h2 class="Section-title">Рекомендуемое
-                    </h2>
+                    <h2 class="Section-title">Рекомендуемое</h2>
                 </div>
                 <div class="Slider Slider_carousel">
                     <div class="Slider-box Cards" data-load="recommended" data-loadoffset="8" data-loadlimit="20">
@@ -679,15 +678,15 @@ p.error-browser
             </div>
             <div class="row-block">
                 <ul class="menu menu_vt Footer-menu">
-                    <li class="menu-item"><a class="menu-link" href="/index.html">Главная</a>
+                    <li class="menu-item"><a class="menu-link" th:href="@{/bookshop}">Главная</a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="/genres/index.html">Жанры</a>
+                    <li class="menu-item"><a class="menu-link" th:href="@{/genres}">Жанры</a>
                     </li>
                     <li class="menu-item"><a class="menu-link" href="/books/recent.html">Новинки</a>
                     </li>
                     <li class="menu-item"><a class="menu-link" href="/books/popular.html">Популярное</a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="/authors/index.html">Авторы</a>
+                    <li class="menu-item"><a class="menu-link" th:href="@{/authors}">Авторы</a>
                     </li>
                 </ul>
             </div>

@@ -1,22 +1,22 @@
 package org.makovej.bookshopapp.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.makovej.bookshopapp.services.BookService;
+import org.makovej.bookshopapp.services.AuthorService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/bookshop")
+@RequestMapping("/authors")
 @RequiredArgsConstructor
-public class MainPageController {
+public class AuthorController {
 
-    private final BookService bookService;
+    private final AuthorService authorService;
 
     @GetMapping
     public String getMainPage(Model model) {
-        model.addAttribute("bookList", bookService.getAllBooks());
-        return "index";
+        model.addAttribute("authorList", authorService.getAllAuthors());
+        return "authors/index";
     }
 }

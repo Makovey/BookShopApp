@@ -8,15 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/bookshop")
+@RequestMapping("/genres")
 @RequiredArgsConstructor
-public class MainPageController {
-
-    private final BookService bookService;
+public class GenresController {
 
     @GetMapping
-    public String getMainPage(Model model) {
-        model.addAttribute("bookList", bookService.getAllBooks());
-        return "index";
+    public String getMainPage() {
+        return "genres/index";
     }
 }

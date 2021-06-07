@@ -19,7 +19,6 @@ public class BookService {
          List<Book> books = jdbcTemplate.query("SELECT * FROM books", (ResultSet rs, int row) -> {
             Book book = new Book();
             book.setId(rs.getLong("id"));
-            book.setAuthor(rs.getString("author"));
             book.setTitle(rs.getString("title"));
             book.setPriceOld(rs.getString("priceOld"));
             book.setPrice(rs.getString("price"));
