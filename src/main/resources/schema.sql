@@ -13,5 +13,6 @@ CREATE TABLE authors
 (
     id     INT AUTO_INCREMENT PRIMARY KEY,
     bookId INT references books (id),
-    name VARCHAR(250) NOT NULL
+    firstName VARCHAR(250) NOT NULL,
+    lastName VARCHAR(250) NOT NULL
 );
