@@ -10,28 +10,9 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
 <html lang="ru"> <!--<![endif]-->
-<head>
-    <title>Тут название страницы написать</title>
-    <meta name="description" content="Описание страницы">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <!--meta( http-equiv="cache-control" content="no-cache")-->
-    <!--meta( http-equiv="expires" content="0")-->
-    <!--link(rel="preload" href="assets/css/extra.min.css?v=" + version as="style" crossorigin="anonymous")-->
-    <link href="favicon.ico" rel="shortcut icon">
-    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/fonts.min.css?v=45744385">
-    <link rel="stylesheet" href="/assets/css/basic.min.css?v=45744385">
-    <link rel="stylesheet" href="/assets/css/extra.min.css?v=45744385">
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script defer src="/assets/js/scripts.min.js?v=45744385"></script>
-</head>
+<head th:replace="~{fragments/head_fragment :: headFragment (pageTitle=#{titlePage.profile})}"></head>
 <body class="Site">
-<header th:replace="~{fragments/header_fragment:: headFragment}"></header>
+<header th:replace="~{fragments/header_fragment:: headerFragment}"></header>
 <div class="Middle">
     <div class="Middle-top">
         <div class="wrap">
@@ -44,11 +25,6 @@
             <h2 class="Middle-title">Мой профиль
             </h2>
             <div class="Tabs Tabs_default">
-                <!--+Tabs-links([-->
-                <!--    ['#basic', 'Основные сведения'],-->
-                <!--    ['#transactions','История транзакций'],-->
-                <!--    ['#topup','Пополнить счет']-->
-                <!--], 'text', 0)-->
                 <div class="Tabs-links"><a class="Tabs-link Tabs-link_ACTIVE" href="#basic">Основные сведения</a><a
                         class="Tabs-link" href="#transactions">История транзакций</a><a class="Tabs-link" href="#topup">Пополнить
                     счет</a>

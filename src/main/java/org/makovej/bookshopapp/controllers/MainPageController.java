@@ -20,8 +20,18 @@ public class MainPageController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/")
+    @GetMapping
     public String getMainPage() {
         return "/index";
+    }
+
+    @GetMapping("/postponed")
+    public String getPostPonedPage() {
+        return "/postponed";
+    }
+
+    @GetMapping("/cart")
+    public String getCartPage() {
+        return "/cart";
     }
 }
