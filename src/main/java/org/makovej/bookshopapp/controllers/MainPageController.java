@@ -1,7 +1,7 @@
 package org.makovej.bookshopapp.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.makovej.bookshopapp.dto.Book;
+import org.makovej.bookshopapp.entities.Book;
 import org.makovej.bookshopapp.services.BookService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +26,7 @@ public class MainPageController {
     }
 
     @GetMapping("/postponed")
-    public String getPostPonedPage() {
+    public String getPostponedPage() {
         return "/postponed";
     }
 

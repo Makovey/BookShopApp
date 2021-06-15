@@ -1,7 +1,7 @@
 package org.makovej.bookshopapp.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.makovej.bookshopapp.dto.Author;
+import org.makovej.bookshopapp.entities.Author;
 import org.makovej.bookshopapp.services.AuthorService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

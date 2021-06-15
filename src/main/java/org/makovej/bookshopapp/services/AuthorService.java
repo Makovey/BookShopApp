@@ -1,7 +1,7 @@
 package org.makovej.bookshopapp.services;
 
 import lombok.RequiredArgsConstructor;
-import org.makovej.bookshopapp.dto.Author;
+import org.makovej.bookshopapp.entities.Author;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -20,9 +20,8 @@ public class AuthorService {
         List<Author> authors = jdbcTemplate.query("SELECT * FROM authors", (ResultSet rs, int row) -> {
             Author author = new Author();
             author.setId(rs.getLong("id"));
-            author.setBookId(rs.getLong("bookId"));
-            author.setFirstName(rs.getString("firstName"));
-            author.setLastName(rs.getString("lastName"));
+            author.setFirstName(rs.getString("first_name"));
+            author.setLastName(rs.getString("last_name"));
             return author;
         });
         return authors
