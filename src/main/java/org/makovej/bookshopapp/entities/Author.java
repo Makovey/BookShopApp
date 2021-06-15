@@ -3,6 +3,7 @@ package org.makovej.bookshopapp.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -14,7 +15,7 @@ public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ToString.Exclude private Long id;
+    private Long id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -28,8 +29,7 @@ public class Author {
     }
 
     @OneToMany
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
-    @ToString.Exclude private List<Book> bookList;
-
+    @JoinColumn(name = "author_id", referencedColumnName = "id", nullable = false)
+    private List<Book> bookList = new ArrayList<>();
 
 }

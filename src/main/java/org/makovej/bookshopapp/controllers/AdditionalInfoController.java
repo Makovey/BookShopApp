@@ -6,11 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AdditionalInfoController {
 
-    @GetMapping("/documents")
-    public String getDocumentPage() {
-        return "/additional/documents";
-    }
-
     @GetMapping("/about")
     public String getAboutPage() {
         return "/additional/about";
