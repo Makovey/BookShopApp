@@ -2,10 +2,9 @@ package org.makovej.bookshopapp.services;
 
 import lombok.RequiredArgsConstructor;
 import org.makovej.bookshopapp.entities.Author;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.makovej.bookshopapp.repositories.AuthorRepo;
 import org.springframework.stereotype.Service;
 
-import java.sql.ResultSet;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -14,19 +13,12 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class AuthorService {
 
-    private final JdbcTemplate jdbcTemplate;
+    private final AuthorRepo authorRepo;
 
     public Map<String, List<Author>> getAuthorsMap() {
-        List<Author> authors = jdbcTemplate.query("SELECT * FROM authors", (ResultSet rs, int row) -> {
-            Author author = new Author();
-            author.setId(rs.getLong("id"));
-            author.setFirstName(rs.getString("first_name"));
-            author.setLastName(rs.getString("last_name"));
-            return author;
-        });
-        return authors
+        return authorRepo.findAll()
                 .stream()
-                .collect(Collectors.groupingBy((Author a) -> a.getLastName().substring(0,1)));
+                .collect(Collectors.groupingBy((Author a) -> a.getLastName().substring(0, 1)));
     }
 
 }

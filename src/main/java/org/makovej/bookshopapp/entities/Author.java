@@ -28,8 +28,7 @@ public class Author {
         return firstName + " " + lastName;
     }
 
-    @OneToMany
-    @JoinColumn(name = "author_id", referencedColumnName = "id", nullable = false)
-    private List<Book> bookList = new ArrayList<>();
+    @OneToMany(mappedBy = "author")
+    private List<Book> bookList;
 
 }
