@@ -15,7 +15,12 @@ public class BooksController {
 
 
     @GetMapping("/popular")
-    public String getRecegnt(){
+    public String getPopularPage(){
         return "/books/popular";
+    }
+
+    @GetMapping("/slug")
+    public String getSlugPage(){
+        return "/books/slug";
     }
 }
