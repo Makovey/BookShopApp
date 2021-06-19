@@ -40,12 +40,12 @@ public class Book {
     @Column(name = "price")
     @JsonProperty("price")
     @ApiModelProperty("book price without discount")
-    private Integer priceOld;
+    private Double priceOld;
 
     @Column(name = "discount", nullable = false)
     @JsonProperty("discount")
     @ApiModelProperty("book price discount")
-    private Integer price;
+    private Double price;
 
     private String image;
 

@@ -3,6 +3,9 @@ package org.makovej.bookshopapp.services;
 import lombok.RequiredArgsConstructor;
 import org.makovej.bookshopapp.entities.Book;
 import org.makovej.bookshopapp.repositories.BookRepo;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,10 +15,6 @@ import java.util.List;
 public class BookService {
 
     private final BookRepo bookRepo;
-
-    public List<Book> getAllBooks() {
-        return bookRepo.findAll();
-    }
 
     public List<Book> getBooksByAuthor(String authorName) {
         return bookRepo.findBooksByAuthorFirstNameContaining(authorName);
@@ -29,16 +28,22 @@ public class BookService {
         return bookRepo.findBooksByPriceOldBetween(min, max);
     }
 
-    public List<Book> findBooksByPriceOldIs(Integer price) {
-        return bookRepo.findBooksByPriceOldIs(price);
-    }
-
     public List<Book> getBestsellers() {
         return bookRepo.getBestsellers();
     }
 
     public List<Book> getBooksWithMaxDiscount() {
         return bookRepo.getBooksWithMaxDiscount();
+    }
+
+    public Page<Book> getPageOfRecommendedBooks(Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepo.findAll(nextPage);
+    }
+
+    public Page<Book> getPageOfSearchResultBooks(String searchWord, Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepo.findBooksByTitleContaining(searchWord, nextPage);
     }
 
 }
