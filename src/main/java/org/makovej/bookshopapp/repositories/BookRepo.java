@@ -16,8 +16,6 @@ public interface BookRepo extends JpaRepository<Book, Long> {
 
     List<Book> findBooksByPriceOldBetween(Integer min, Integer max);
 
-    List<Book> findBooksByPriceOldIs(Integer price);
-
     @Query("from Book where isBestseller=1")
     List<Book> getBestsellers();
 
@@ -25,4 +23,9 @@ public interface BookRepo extends JpaRepository<Book, Long> {
     List<Book> getBooksWithMaxDiscount();
 
     Page<Book> findBooksByTitleContaining(String bookTitle, Pageable nextPage);
+
+    Page<Book> findBooksByOrderByIdDesc(Pageable nextPage);
+
+    Page<Book> findBooksByOrderByRatingDesc(Pageable nextPage);
+
 }

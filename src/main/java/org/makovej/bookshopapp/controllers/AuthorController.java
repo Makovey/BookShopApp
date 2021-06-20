@@ -3,6 +3,7 @@ package org.makovej.bookshopapp.controllers;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import org.makovej.bookshopapp.dto.SearchWordDto;
 import org.makovej.bookshopapp.entities.Author;
 import org.makovej.bookshopapp.services.AuthorService;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,11 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Api(description = "authors data")
 public class AuthorController {
+
+    @ModelAttribute("searchWordDto")
+    public SearchWordDto searchWordDto() {
+        return new SearchWordDto();
+    }
 
     private final AuthorService authorService;
 

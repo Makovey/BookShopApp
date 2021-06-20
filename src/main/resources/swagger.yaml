@@ -81,7 +81,7 @@ paths:
                     description: Error
                     schema:
                         $ref: '#/definitions/Error'
-    /books/popular:
+    /books/popular-books:
         get:
             tags:
                 - popular

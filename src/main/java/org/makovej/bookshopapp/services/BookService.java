@@ -46,4 +46,14 @@ public class BookService {
         return bookRepo.findBooksByTitleContaining(searchWord, nextPage);
     }
 
+    public Page<Book> getPageOfNewBooks(Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepo.findBooksByOrderByIdDesc(nextPage);
+    }
+
+    public Page<Book> getPageOfHighestRatingBooks(Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepo.findBooksByOrderByRatingDesc(nextPage);
+    }
+
 }
