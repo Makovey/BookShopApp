@@ -1,12 +1,12 @@
 package org.makovej.bookshopapp.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.makovej.bookshopapp.dto.BooksPageDto;
 import org.makovej.bookshopapp.dto.SearchWordDto;
 import org.makovej.bookshopapp.entities.Book;
 import org.makovej.bookshopapp.services.BookService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,24 +55,6 @@ public class MainPageController {
     @GetMapping("/cart")
     public String getCartPage() {
         return "/cart";
-    }
-
-    @GetMapping("/books/recommended")
-    @ResponseBody
-    public BooksPageDto getRecommendedBooksPage(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BooksPageDto(bookService.getPageOfRecommendedBooks(offset, limit).getContent());
-    }
-
-    @GetMapping("/books/recent")
-    @ResponseBody
-    public BooksPageDto getNewBooksPage(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BooksPageDto(bookService.getPageOfNewBooks(offset, limit).getContent());
-    }
-
-    @GetMapping("/books/popular-books")
-    @ResponseBody
-    public BooksPageDto getPopularBooksPage(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit) {
-        return new BooksPageDto(bookService.getPageOfHighestRatingBooks(offset, limit).getContent());
     }
 
 }
