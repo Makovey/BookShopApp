@@ -72,4 +72,7 @@ public class Book {
     @OneToMany(mappedBy = "book")
     private List<Genre> genres;
 
+    @OneToOne(mappedBy = "book")
+    private BookInfo bookInfo;
+
 }

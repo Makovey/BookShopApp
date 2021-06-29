@@ -30,8 +30,14 @@ public class BooksController {
         return new BooksPageDto(bookService.getPageOfNewBooks(from, to, 0, 15).getContent());
     }
 
+    @ModelAttribute("popularBooks")
+    @ResponseBody
+    public BooksPageDto popularBooks() {
+        return new BooksPageDto(bookService.getPopularBooks(0, 15).getContent());
+    }
+
     @GetMapping("/news")
-    public String getRecentPage(){
+    public String getRecentPage() {
         return "/books/news";
     }
 

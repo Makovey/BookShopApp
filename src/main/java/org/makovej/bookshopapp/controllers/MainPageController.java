@@ -57,4 +57,9 @@ public class MainPageController {
         return "/cart";
     }
 
+    @GetMapping("/tags")
+    public String getTagsPage() {
+        return "/tags/index";
+    }
+
 }

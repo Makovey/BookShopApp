@@ -31,4 +31,8 @@ public interface BookRepo extends JpaRepository<Book, Long> {
 
     Page<Book> findBooksByPubDateBetween(Date from, Date to, Pageable nextPage);
 
+    @Query(value = "SELECT b.id, b.description, b.image, b.is_bestseller, b.discount, b.price, b.pub_date, b.rating, b.slug, b.title, b.author_id " +
+            "FROM books as b JOIN book_info as bi on b.id = bi.book_id ORDER BY bi.calculate_popular DESC", nativeQuery = true)
+    Page<Book> findBooksByCalculatedPopularityDesc(Pageable nextPage);
+
 }

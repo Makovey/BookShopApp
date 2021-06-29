@@ -64,3 +64,57 @@ insert into books (id, pub_date, is_bestseller, slug, title, image, description,
 insert into books (id, pub_date, is_bestseller, slug, title, image, description, price, rating, discount, author_id) values (48, '2000/08/26', 1, 'book-bku-881', 'Jimmy Neutron: Boy Genius', 'http://dummyimage.com/699x565.png/5fa2dd/ffffff', 'Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.', 598, 5, 0.15, 14);
 insert into books (id, pub_date, is_bestseller, slug, title, image, description, price, rating, discount, author_id) values (49, '2021/06/04', 0, 'book-vjv-885', 'Louise Bourgeois: The Spider, the Mistress and the Tangerine', 'http://dummyimage.com/690x552.png/5fa2dd/ffffff', 'Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', 2264, 1, 0.45, 1);
 insert into books (id, pub_date, is_bestseller, slug, title, image, description, price, rating, discount, author_id) values (50, '2020/08/08', 0, 'book-bjf-354', 'Carnosaur 2', 'http://dummyimage.com/480x610.png/ff4444/ffffff', 'Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.', 1656, 0, 0.13, 4);
+
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (2, 5, 14, 1);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (1, 14, 23, 2);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (1, 15, 11, 3);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (25, 21, 11, 4);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (27, 4, 11, 5);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (12, 5, 2, 6);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (17, 21, 7, 7);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (2, 22, 5, 8);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (23, 16, 24, 9);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (19, 8, 20, 10);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (5, 27, 22, 11);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (20, 25, 21, 12);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (6, 15, 26, 13);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (21, 6, 21, 14);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (30, 8, 29, 15);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (27, 8, 15, 16);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (15, 30, 26, 17);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (5, 6, 18, 18);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (12, 26, 17, 19);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (6, 21, 27, 20);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (27, 18, 25, 21);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (7, 12, 17, 22);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (13, 15, 10, 23);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (26, 9, 24, 24);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (5, 23, 1, 25);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (22, 7, 11, 26);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (22, 29, 16, 27);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (13, 20, 22, 28);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (8, 12, 18, 29);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (17, 12, 26, 30);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (12, 17, 16, 31);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (2, 26, 10, 32);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (22, 18, 9, 33);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (11, 16, 29, 34);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (28, 25, 28, 35);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (30, 27, 25, 36);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (9, 1, 21, 37);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (26, 17, 13, 38);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (25, 3, 1, 39);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (11, 3, 27, 40);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (26, 17, 17, 41);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (27, 24, 25, 42);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (7, 1, 20, 43);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (3, 14, 14, 44);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (2, 24, 11, 45);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (10, 16, 24, 46);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (1, 8, 15, 47);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (30, 18, 15, 48);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (18, 2, 17, 49);
+insert into book_info (quantity_of_sales, quantity_of_postponed, quantity_in_cart, book_id) values (15, 27, 21, 50);
+
+UPDATE book_info
+SET calculate_popular = quantity_of_sales + (0.7 * cast(quantity_in_cart AS DOUBLE PRECISION)) + (0.4 * cast(quantity_of_postponed AS DOUBLE PRECISION))

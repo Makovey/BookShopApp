@@ -70,4 +70,9 @@ public class BookService {
         return bookRepo.findBooksByOrderByRatingDesc(nextPage);
     }
 
+    public Page<Book> getPopularBooks(Integer offset, Integer limit) {
+        Pageable nextPage = PageRequest.of(offset, limit);
+        return bookRepo.findBooksByCalculatedPopularityDesc(nextPage);
+    }
+
 }
